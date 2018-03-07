@@ -1,0 +1,9 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:

@@ -17,6 +17,7 @@
         <module>cloud-consumer-feign-hystrix</module>
         <module>cloud-hystrix-dashboard</module>
         <module>cloud-hystrix-turbine</module>
+        <module>cloud-config-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

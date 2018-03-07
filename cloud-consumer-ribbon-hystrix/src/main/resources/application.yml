@@ -1,0 +1,15 @@
+server:
+  port: 8011
+spring:
+  application:
+    name: cloud-consumer-ribbon-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    hostname: ribbon
+    # 此处，preferIpAddress不设置或者
+#    设为false，不能设为true，否则影响turbine的测试。turbine存在的问题：eu
+#    reka.instance.hostname⼀致时只能检测到⼀个节点，会造成turbine数据不
+#    完整

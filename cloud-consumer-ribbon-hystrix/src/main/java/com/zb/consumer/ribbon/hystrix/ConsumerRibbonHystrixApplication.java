@@ -1,20 +1,23 @@
-package com.zb.eureka.provider;
+package com.zb.consumer.ribbon.hystrix;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 2018/3/5 15:55
+ * 2018/3/6 16:57
  *
  * @author zb
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ProviderApplication {
+@EnableCircuitBreaker
+public class ConsumerRibbonHystrixApplication {
+
 
     @Bean
     @LoadBalanced
@@ -23,6 +26,6 @@ public class ProviderApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ProviderApplication.class,args);
+        SpringApplication.run(ConsumerRibbonHystrixApplication.class,args);
     }
 }

@@ -12,6 +12,11 @@
         <module>cloud-eureka</module>
         <module>cloud-provider-user</module>
         <module>cloud-consumer-ribbon</module>
+        <module>cloud-consumer-feign</module>
+        <module>cloud-consumer-ribbon-hystrix</module>
+        <module>cloud-consumer-feign-hystrix</module>
+        <module>cloud-hystrix-dashboard</module>
+        <module>cloud-hystrix-turbine</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -8,6 +8,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * 2018/3/5 16:02
@@ -40,4 +41,5 @@ public class UserController {
         ServiceInstance localServiceInstance = this.discoveryClient.getLocalServiceInstance();
         return localServiceInstance;
     }
+
 }

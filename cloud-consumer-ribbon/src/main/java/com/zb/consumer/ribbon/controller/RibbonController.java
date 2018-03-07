@@ -21,4 +21,5 @@ public class RibbonController {
     public User findById(@PathVariable Long id) {
         return this.ribbonService.findById(id);
     }
+
 }

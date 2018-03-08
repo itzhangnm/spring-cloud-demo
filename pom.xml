@@ -19,6 +19,8 @@
         <module>cloud-hystrix-turbine</module>
         <module>cloud-config-server</module>
         <module>cloud-config-client</module>
+        <module>cloud-config-server-eureka</module>
+        <module>cloud-config-client-eureka</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

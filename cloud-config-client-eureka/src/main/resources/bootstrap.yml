@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: cloud-config-client-eureka
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: cloud-config-server-eureka
+        # 指定config server在服务发现中的serviceId，默认为:configserver
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://discovery:8761/eureka/

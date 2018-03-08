@@ -1,0 +1,21 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: cloud-config-server-eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/itzhangnm/spring-cloud-demo
+          # 配置git仓库的地址
+          search-paths: config-repo
+          # git仓库地址下的相对地址，可以配置多个，⽤,分割
+          username: itzhangnima@163.com
+          # git仓库的账号
+          password: zhangbo123
+          # git仓库的密码
+eureka:
+  client:
+    service-url:
+      default-zone: http://discovery:8761/eureka/

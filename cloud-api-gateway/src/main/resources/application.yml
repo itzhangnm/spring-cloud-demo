@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cloud-api-gateway
+server:
+  port: 8060
+#eureka:
+#  instance:
+#    hostname: gateway
+#  client:
+#    service-url:
+#      default-zone: http://discovery:8761/eureka/
+
+
+# 下⾯整个树都⾮必须，如果不配置，将默认使⽤ http://GATEWAY:GATEWAY_
+#      PORT/想要访问的Eureka服务id的⼩写/** 路由到：http://想要访问的Eureka
+#      服务id的⼩写:该服务端⼝/**
+zuul:
+  ignored-services: cloud-provider-user,cloud-consumer-ribbon  # 需要忽视的服务(配置后将不会被路由)
+  routes:
+    ribbon: # 可以随便写，在zuul上⾯唯⼀即可；当这⾥的值 = service-id时，service-id可以不写。
+      path: /ribbon/** # 想要映射到的路径
+#      service-id: cloud-consumer-ribbon-hystrix # Eureka中的serviceId
+      url: http://localhost:8011/  #可以不依赖eureka 配置对应url即可
+#    feign:
+#      path: /feign/**
+#      service-id: cloud-consumer-feign-hystrix

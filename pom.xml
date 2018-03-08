@@ -21,6 +21,7 @@
         <module>cloud-config-client</module>
         <module>cloud-config-server-eureka</module>
         <module>cloud-config-client-eureka</module>
+        <module>cloud-api-gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
